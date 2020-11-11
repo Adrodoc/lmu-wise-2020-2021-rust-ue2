@@ -7,7 +7,7 @@ fn main() {
 fn quicksort<T: Clone + PartialOrd>(v: &mut [T]) {
     let len = v.len();
     if len > 1 {
-        let pivot = v[0].clone();
+        let pivot = v[len / 2].clone();
         let mut left = 0;
         let mut right = len - 1;
         while left <= right {
@@ -20,9 +20,7 @@ fn quicksort<T: Clone + PartialOrd>(v: &mut [T]) {
             if left <= right {
                 v.swap(left, right);
                 left += 1;
-                if right != 0 {
-                    right -= 1;
-                }
+                right -= 1;
             }
         }
         quicksort(&mut v[..=right]);
