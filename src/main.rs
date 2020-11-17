@@ -1,6 +1,9 @@
+// use rand::Rng;
 use std::fmt::Debug;
 
 fn main() {
+    // let mut rng = rand::thread_rng();
+    // let v: Vec<u32> = (0..10).map(|_| rng.gen_range(0, 10)).collect();
     let v = vec![3, 6, 7, 5, 2, 1, 4, 8];
 
     println!("quicksort:");
